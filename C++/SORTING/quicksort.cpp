@@ -24,8 +24,12 @@ int partition(vector<int> &arr , int low ,int high )
         }
     }
     swap(arr[low],arr[j]);   // gives pivot to correct position
-    return j;  // return the partition 
+    //return j;  // return the partition 
+    for(auto it : arr){
+        cout<<it;
+    }
 }
+/*
 void  qs(vector<int> &arr , int low , int high )
 {
     if(low<high)
@@ -35,7 +39,7 @@ void  qs(vector<int> &arr , int low , int high )
         qs(arr,pindex+1,high); //Recursively sort right portion
     }
 }
-
+*/
 int main(){
     int n;
     cout<<"Enter the size of the array :"<<endl;
@@ -45,12 +49,13 @@ int main(){
     for(int i=0;i<n;i++) cin>>arr[i];  //Input in the array 
     int low=0;
     int high=n-1;
-    qs(arr,low,high);
+    //qs(arr,low,high);
     // Array after quick sort 
-    for (int  i = 0; i < n; i++)
+   /* for (int  i = 0; i < n; i++)
     {
         cout<<arr[i]<<" ";
-    }
+    }*/
+    partition(arr,low,high);
     
     return 0;
 }
