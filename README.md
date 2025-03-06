@@ -82,8 +82,8 @@ Contributions are **welcome**! If you want to add new programs or improve existi
 
 ## 📬 Connect with Me
 [![GitHub](https://img.shields.io/badge/GitHub-viveksaha18-black?style=flat&logo=github)](https://github.com/viveksaha18)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vivek%20Saha-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/viveksaha18)  
-[![Email](https://img.shields.io/badge/Email-viveksaha18%40gmail.com-red?style=flat&logo=gmail)](mailto:viveksaha18@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vivek%20Saha-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/vivek-saha-7774b42b9/)  
+[![Email](https://img.shields.io/badge/Email-viveksaha18%40gmail.com-red?style=flat&logo=gmail)](mailto:viveksaha096@gmail.com)
 
 ---
 
