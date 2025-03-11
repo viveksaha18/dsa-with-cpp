@@ -14,7 +14,7 @@ class Node{
     }
 };
 
-void deleteatEnd(Node* &head){
+/*void deleteatEnd(Node* &head){
     if(head == nullptr) cout<<"List is empty";
     Node* mover = head;
     
@@ -25,6 +25,24 @@ void deleteatEnd(Node* &head){
     mover->next = nullptr;
 
     // Printing the ll
+    while(head != nullptr){
+        cout<<"["<<head->data<<"]"<<"-->";
+        head = head->next;
+    }
+
+}*/
+
+// Method 2 
+void deleteatEnd(Node* head){
+    Node* after = head->next;
+    Node* prev = head;
+    while(after->next != nullptr){
+        after = after->next;
+        prev = prev->next;
+    }
+    free(after);
+    prev->next = nullptr;
+
     while(head != nullptr){
         cout<<"["<<head->data<<"]"<<"-->";
         head = head->next;
