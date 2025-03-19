@@ -33,6 +33,11 @@ Explanation: There are 7 ways to rob the houses. The way which leads to minimum 
 */
 
 
+/*
+Uses the binary search approach 
+
+*/
+
 bool canRob(vector<int>& arr , int capability , int k){
     int cnt = 0;
     for(int i = 0; i < arr.size(); i++){
