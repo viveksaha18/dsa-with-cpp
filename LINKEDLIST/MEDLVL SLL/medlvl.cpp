@@ -188,6 +188,72 @@ bool hasCycleOptimal(Node* head){
     }
     return false;
 }
+
+
+// Question 4
+/*
+Brute Force Approach 
+We use a stack data structure as in stack data structure the elements are check from bottom to top.
+First of all put all the values in stack ds and then traverse over the stack and the given ll if the data matches return true otherwise false.
+Time Complexity : O(2*n)
+Space Complexity : O(n)
+*/
+bool isPalindrome(Node* head) {
+    stack<int> st;
+    Node* temp = head;
+    while(temp != nullptr){
+        st.push(temp->data);
+        temp = temp->next;
+    }
+
+
+    temp = head;
+    while(temp != nullptr){
+        if(st.top() != temp->data) return false;
+        st.pop();
+        temp = temp->next;
+    }
+    return true;
+}
+
+
+/*
+Optimal Approach 
+
+*/
+Node* reverse(Node* head) {
+    // Using recursive method
+    if(head == nullptr || head->next == nullptr) return head;
+    Node* newHead = reverse(head->next);
+    Node* front = head->next;
+    front->next = head;
+    head->next = nullptr;
+    return newHead;
+}
+bool isPalindromeOptimal(Node* head){
+    
+        Node* fast = head;
+        Node* slow = head;
+        while(fast->next != nullptr && fast->next->next != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        // Reverse the second half 
+        Node* newHead = reverse(slow->next);
+        Node* first = head;
+        Node* second = newHead;
+        while(second != nullptr){
+            if(first->data != second->data){
+                reverse(newHead);
+                return false;
+            }
+            first = first->next;
+            second = second->next;
+        }
+        reverse(newHead);
+        return true;
+    
+}
 int main(){
 
     /*Question 1 --> Middle of the linkedlist
@@ -252,7 +318,7 @@ int main(){
     There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
 
     Return true if there is a cycle in the linked list. Otherwise, return false.
-    */
+    
 
     vector<int> arr = {3,2,0,4};
     Node* head = new Node(arr[0]);
@@ -273,6 +339,31 @@ int main(){
 
     cout << isFalse;
 
+*/
 
+/*
+Question 4
+Plaindrome LinkedList
+Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
+Input: head = [1,2,2,1]
+Output: true
+Input: head = [1,2]
+Output: false
+*/
+vector<int> arr = {1,2,2,1};
+Node* head = new Node(arr[0]);
+Node* newnode = head;
+for(int i = 1; i < arr.size(); i++){
+       newnode->next = new Node(arr[i]);
+       newnode = newnode->next;
+}
+bool ans = isPalindrome(head);
+cout << ans;
+
+
+// Optimal approach 
+bool opans = isPalindromeOptimal(head);
+
+cout << opans;
     return 0;
 }
