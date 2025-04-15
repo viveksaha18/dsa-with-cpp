@@ -16,6 +16,14 @@ size()
 */
 int arr[10];
 int topvar = -1; 
+
+
+
+
+
+
+
+
 void push(int x  ){
     if(topvar >= 10) cout << "Stack is full" << endl;
     topvar = topvar + 1;
