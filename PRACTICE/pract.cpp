@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int i = 5;
-    for(int j = 0; j < 1; j++){
-    if(i == 5) cout <<" Vivek ";
-    if(i == 5) cout << "jasl;";
-    }
+    map<int,int>mpp;
+    mpp[0]++;
+    mpp[2]++;
+    mpp[2]++;
+    
+    cout << mpp[0];
     return 0;
 }
