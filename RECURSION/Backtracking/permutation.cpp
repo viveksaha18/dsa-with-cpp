@@ -2,6 +2,9 @@
 using namespace std;
 
 
+/*
+You have given an array you have to find it all permutations 
+*/
 
 void getPermutation(vector<int>&arr , int idx , vector<vector<int>>&ans){
     if(idx == arr.size()){
