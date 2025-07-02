@@ -44,5 +44,7 @@ int main(){
     for (int i = 0; i < ans.size(); i++) {
         cout << ans[i] << " ";
     }
+    cout << endl;
+    cout << "Answer of Inorder Traversal is 4 2 8 5 1 7 3 6 9" << endl;
     return 0;
 }

@@ -26,8 +26,6 @@ void preorderTraversal(Node* root, vector<int> &ans) {
     
     // Traverse the right subtree
     preorderTraversal(root->right, ans);
-    
-    // Print the result
 
 }
 
@@ -53,5 +51,7 @@ int main()
     for (int i = 0; i < ans.size(); i++) {
         cout << ans[i] << " ";
     }
+    cout << endl;
+    cout << "Answer of Preorder Traversal is 1 2 4 8 5 3 7 6 9" << endl;
     return 0;
 }

@@ -42,6 +42,7 @@ int main(){
     for (int i = 0; i < ans.size(); i++) {
         cout << ans[i] << " ";
     }
+    cout << endl;
     cout << "Answer of Postorder Traversal is 4 8 5 2 7 9 6 3 1" << endl;
     
     return 0;
