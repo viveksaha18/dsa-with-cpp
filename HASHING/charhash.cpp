@@ -35,7 +35,7 @@ string s;
     int hash[26]={0};  // for lower case 
     // precomputing 
     for(int i=0;i<s.size();i++){
-        hash[s[i]-'a']++;
+        hash[s[i]-'a']++; // how s[i] - 'a' works : It gives the index of the character in the array. For example if s[i] = 'a' then it will give 0, if s[i] = 'b' then it will give 1 and so on.
     }
     int q;
     cout<<"Enter the numbers of quries :"<<endl;

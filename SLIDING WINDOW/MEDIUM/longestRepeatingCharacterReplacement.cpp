@@ -62,6 +62,8 @@ int longestRepeatingCharacter_BruteForce(string s,int k){
 Optimal Approach : Sliding Window Technique
 Here we maintain a window and we will keep expanding the window until the changes required to make all characters in the window same is <= k. 
 If it exceeds k then we will shrink the window from left side.
+Time Complexity : O(n) and Space Complexity : O(1) // We are using map but it is not counted in space complexity as it is not dependent on input size.
+We can also use an array of size 26 instead of map to store the frequency of characters     
 */
 
 int longestRepeatingCharacter_Optimal(string s,int k){
