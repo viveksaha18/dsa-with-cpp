@@ -56,7 +56,7 @@ int trappingRainWater_Brute(vector<int>& height) {
 
 // Optimal Solution : Using next greater and previous greater element
 
-int trappingRainWater_Optimal(vector<int>& height) {
+int trappingRainWater_Better(vector<int>& height) {
     int n = height.size();
     vector<int> leftMax(n,0);
     vector<int> rightMax(n,0);
@@ -76,10 +76,35 @@ int trappingRainWater_Optimal(vector<int>& height) {
     }
     return cnt;
 }
+
+
+// Optimal Solution :   Does not take extra space, as because we know minimum height will always be the deciding factor for water trap
+// and we know for finding water trap we need to find leftMax and rightMax, which can do using two pointers 
+int trappingRainWater_Optimal(vector<int>& height) {
+    int cnt = 0;
+    int n = height.size();
+    int l = 0 , r = n - 1;
+    int leftMax = 0, rightMax = 0;
+    while(l < r) {
+        leftMax = max(leftMax, height[l]);
+        rightMax = max(rightMax, height[r]);
+        if(leftMax < rightMax) {
+            cnt += leftMax - height[l];
+            l++;
+        }
+        else {
+            cnt += rightMax - height[r];
+            r--;
+        }
+    }
+    return cnt;
+}
 int main(){
     vector<int> height = {0,1,0,2,1,0,1,3,2,1,2,1};
     int bruteAns = trappingRainWater_Brute(height);
     cout << bruteAns << endl;
+    int betterAns = trappingRainWater_Better(height);
+    cout << betterAns << endl;
     int optimalAns = trappingRainWater_Optimal(height);
     cout << optimalAns << endl;
     return 0;
