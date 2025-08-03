@@ -92,7 +92,7 @@ long long sumofSubarrayMinimum_Optimal(vector<int> arr) {
         int right = nSmaller[i] - i;
         total = (total + (right * left * 1LL * arr[i]) % mod) % mod;
         }
-     return total;
+    return total;
 }
 int main() {
     vector<int> arr = {3, 1, 2, 4};
