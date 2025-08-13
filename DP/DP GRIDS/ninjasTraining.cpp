@@ -63,9 +63,9 @@ int main() {
     prev[1] = max(arr[0][0], arr[0][2]);
     prev[2] = max(arr[0][0], arr[0][1]);
      for(int day = 1; day < n; day++) {
-            vector<int> temp(4, 0);
-            for(int last = 0; last < 4; last++) {
-                temp[last] = 0;
+        vector<int> temp(4, 0);
+        for(int last = 0; last < 4; last++) {
+            temp[last] = 0;
                 for(int i = 0; i <= 2; i++) {
                     if(i != last) {
                        temp[last] =  max(temp[last], arr[day][i] + prev[i]);
