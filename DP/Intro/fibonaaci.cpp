@@ -6,9 +6,8 @@ using namespace std;
 
 
 int f(int n, vector<int>& dp) {
-    if(n <= 1) return n;
-    if(dp[n] != -1) return dp[n];
-    return dp[n] = f(n - 1, dp) + f(n - 2, dp);
+    
+    
 }
 // Here, time Complexity is O(n) space complexity : O(n) (stack space) + O(n) (array space)
 /// @return 
@@ -36,6 +35,6 @@ int main() {
         prev2 = prev;
         prev = curr;
     }
-    cout << prev << endl;
+    cout << prev << endl; // TC : O(n) SC : O(1)
     return 0;
 }

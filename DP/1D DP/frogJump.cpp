@@ -36,7 +36,7 @@ int main() {
     vector<int> heights = {20, 30, 40, 20};
     int n = heights.size();
     vector<int> dp(n, -1);
-    //cout << f(n - 1, heights, dp) << endl;
+    cout << f(n - 1, heights, dp) << endl;
 
     dp.clear();
     dp.resize(n, -1);
