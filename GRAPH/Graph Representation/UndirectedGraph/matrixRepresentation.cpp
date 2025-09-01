@@ -25,5 +25,7 @@ int main() {
         }
         cout << endl;
     }
+
+    // Space Complexity : O(n^2)
     return 0;
 }

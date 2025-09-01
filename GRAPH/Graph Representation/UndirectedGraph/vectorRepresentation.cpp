@@ -27,5 +27,6 @@ int main() {
         // u -----> v
         adj[u].push_back(v);
     }
+    // Space Complexity : O(2E) where E is the number of total edges in graph 
     return 0;
 }
