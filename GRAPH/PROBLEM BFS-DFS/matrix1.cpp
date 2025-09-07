@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-// Problem Link : "https://leetcode.com/problems/01-matrix/"
+// Problem link : "https://leetcode.com/problems/01-matrix/description/"
 class Solution {
 public:
     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) {
