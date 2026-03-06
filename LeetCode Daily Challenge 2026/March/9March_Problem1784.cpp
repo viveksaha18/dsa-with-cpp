@@ -25,7 +25,7 @@ bool check(int idx, string& s) {
 };
 int main() {
     Solution s;
-    string s = "1001";
-    cout << s.checkOnesSegment(s) << endl;
+    string str = "1001";
+    cout << s.checkOnesSegment(str) << endl;
     return 0;
 }
