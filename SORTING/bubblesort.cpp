@@ -1,6 +1,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+// Logic : In one Pass the largest unsorted element moves to its respective poistion. It sort the array from the back side 
 // Performing Bubble sort 
 int*  bubblesort(int n, int arr[]){
     

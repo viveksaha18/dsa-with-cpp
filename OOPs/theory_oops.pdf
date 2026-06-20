@@ -1,0 +1,46 @@
+What is OOPs?
+--> OOPs means Object Oriented Programming.
+--> It is a way to write a program.
+--> Here, we use classes and objects while writing a program. 
+-->In OOPs data and function are bundled together into a single unit called as class.
+--> Class is just like a blueprint and Objects are the instance of class which represents a real world entity.
+--> OOPs helps in code reusability, security and maintainablity.
+
+What is a Class?
+--> A class is a blueprint or template used to create objects.
+-->It contains data members and member functions. 
+--> Data members refers to variables and Member functions refers to methods.
+--> Memory is not allocated when a class is created.
+--> It defines the properties and behaviors of a class.
+--> Properties are the data which describes the object.
+--> Example Car its color, model and brand these are its properties
+--> Behaviors are the actions that an object can perform.
+--> Example: Start(), Pop()
+
+Syntax of declaring a class 
+Class class-name{
+    // properties
+    string p1;
+    string p2;
+
+    // Member functions
+};
+
+class Car {
+    // Properties
+    string color;
+    string brand;
+
+    // member functions
+    void start()
+};
+
+What is Object?
+--> An object is an instance of a class.
+--> It represents an actual real world thing.
+--> It can access the data members and member functions define in a class.
+--> Memory is allocated when the objects is created.
+
+// Syntax to create a object
+classname objectname
+Car c1;
