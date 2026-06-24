@@ -44,3 +44,25 @@ What is Object?
 // Syntax to create a object
 classname objectname
 Car c1;
+
+
+--> Four Pillars of OOPs
+
+    Encapsulation: 
+--> Wrapping up data(variables) and methods(functions) together inside a class.
+--> Restricts direct access to the data  and protects it from unauthorized access.
+
+    Abstraction: 
+--> Shows only essential details and hides the complex implementation.
+--> Example - you drive a car using steering wheel but you do not know the structure of engine.
+
+    Inheritance: 
+--> One class can acquire the properties and methods of another class.
+--> Helps in reusing existing code and reducing duplication.
+--> A car can inherit common features from the vehicle class.
+
+    Polymorphism:
+--> Poly means many, morphism means 
+--> Real Life Example At home you are son, At school you are student, With friends, you are friend
+--> One persons, many forms = polymorphism
+--> Example we have a method called sound(), method name sound but behavior depend on the object
