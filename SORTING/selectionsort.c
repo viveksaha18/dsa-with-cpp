@@ -16,12 +16,12 @@ int main()
     }
     
     // Selection sorting
-    for(i=0; i< n-1; i++) {
-        for(j=i+1; j < n; j++) {
-            if(x[i] > x[j]) {
-                temp=x[i];
-                x[i]=x[j];
-                x[j]=temp;
+    for(i = 0; i < n; i++) {
+        for(j = 0; j < n-1; j++) {
+            if(x[j] > x[j+1]) {
+                temp=x[j];
+                x[j]=x[j+1];
+                x[j+1]=temp;
             }
         }
     }
