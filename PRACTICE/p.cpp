@@ -1,53 +1,31 @@
+//  arr = [1 2 3 4 5 6 7 ] k = 2 
 #include<bits/stdc++.h>
 using namespace std;
-/* Question:
-Given an array of integers, return the index of the first unique element (element that appears exactly once). If no unique element exists, return -1.
 
-Example:
-Input: [4, 5, 1, 2, 1, 2, 5]
-Output: 0 (since 4 is the first unique element).*/
+void reverseNK(vector<int>& arr, int end) {
+    int l = 0; 
+    while(l < end) {
+        swap(arr[l], arr[end]);
+        l++;
+        end--;
+    }
+}
+void reverseKN(vector<int>& arr, int st) {
+    int end = arr.size()-1;
+    while(st < end) {
+        swap(arr[st], arr[end]);
+        st++;
+        end--;
+    }
+}
 int main() {
-    int n;
-    cin >> n;
-    int arr[n];
-    int cnt = 0;
-    bool flag = false;
-    int idx = 0;
-    //Input: [4, 5, 1, 2, 1, 2, 5]
-    for(int i = 0; i < n; i++) cin >> arr[i];
-
-    /* Brute Force 
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            if(arr[i] == arr[j]) {
-                cnt++;
-            }
-        }
-        if(cnt == 1) {
-            idx = i;
-            flag = true;
-            break;
-        }
+    vector<int> arr = {1, 2, 3, 4, 5, 6, 7};
+    int k = 2;
+    reverse(arr.begin(), arr.end());
+    reverseNK(arr, arr.size()-k-1);
+    reverseKN(arr, arr.size()-k);
+    for(int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << " ";
     }
-    if(flag) cout << idx;
-    */
-
-    vector<int> hashArr(n, 0);
-    for(int i = 0; i < n; i++) {
-        hashArr[arr[i]]++;
-    }
-     idx = 0;
-    for(int i = 0; i < n; i++) {
-        if(hashArr[i] == 1) {
-            idx = i;
-        }
-    }
-    for(int i = 0; i < n; i++) {
-        if(arr[i] == idx) {
-            cout << i;
-            break;
-        }
-    }
-    
     return 0;
 }
